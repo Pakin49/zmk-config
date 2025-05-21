@@ -19,14 +19,26 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>; 
         };
     };
-
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <100>;
+            key-positions = <2 7>;
+            bindings = <&kp ESC>;
+        };
+        combo_caplock {
+            timeout-ms = <100>;
+            key-positions = <1 8>;
+            bindings = <&kp CAPS>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
         default_layer {
