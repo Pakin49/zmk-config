@@ -21,8 +21,8 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>; // ignore mod tap interrupt
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>; // ignore mod tap interrupt
             bindings = <&kp>, <&kp>; 
         };
     };
