@@ -1,9 +1,11 @@
-// Copyright (c) 2022 The ZMK Contributors
-// SPDX-License-Identifier: MIT
-
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+#include "zmk-helpers/helper.h"
+
+// Source desired key-position labels
+#include "zmk-helpers/key-labels/34.h"
 
 // Define layers
 #define NUM 1
@@ -11,29 +13,96 @@
 #define SYM 3
 #define FUN 4
 
+//Home-row mod terms
+#define HM_TAPPING_TERM 300
+#define HM_TAPPING_TERM_FAST 200
+#define HM_PRIOR_IDLE 150
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
 / {
     behaviors {
-        ht: hold_tap {
+        // Positional Homerow mods
+        // Homerow mods that prevent accidental activations when rolling keys,
+        // such as when typing `st` or `ne` on colemak-dh layouts or `as` on
+        // qwerty.
+        //
+        // Works by only allowing a mod to activate within tapping-term if
+        // it's on the opposite side of the keyboard or on the same side thumb
+        // keys.
+
+        // Further optimization using urob's timerless homerow mods method:
+        // https://github.com/urob/zmk-config#timeless-homerow-mods
+        hm_l: homerow_mods_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <120>;
-            require-prior-idle-ms = <100>; // ignore mod tap interrupt
-            bindings = <&kp>, <&kp>; 
+            bindings = <&kp>,  <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            hold-trigger-on-release;
         };
-    };
+
+        hm_r: homerow_mods_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            hold-trigger-on-release;
+        };
+
+
+        // Positional Homerow mods for shift
+        // Use faster tapping term and disable some features that may
+        // cause false negatives.
+        hm_shift_l: hm_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            // hold-trigger-on-release;
+        };
+
+        hm_shift_r: hm_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            flavor = "balanced";
+            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <HM_PRIOR_IDLE>;
+
+            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            // hold-trigger-on-release;
+        };
+
     combos {
         compatible = "zmk,combos";
         combo_esc {
+            global-quick-tap-ms = <75>
             timeout-ms = <100>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
         };
         combo_caplock {
+            global-quick-tap-ms = <75>
             timeout-ms = <100>;
             key-positions = <1 8>;
             bindings = <&kp CAPS>;
@@ -48,7 +117,7 @@
                     &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SEMI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-                    HRML(A,        R,         S,         T)     &kp G          &kp M      HRMR(N,        E,         I,        O)
+            &hm_l LGUI A &hml LALT R &hm_l LCTRL S &hm_shift_l LSHFT T &kp G &kp M &hm_shfit_r RSHFT N &hm_r RCTRL E &hm_r RALT I &hm_r RGUI O
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ , <      │ . >      │ / ?      │
                     &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
