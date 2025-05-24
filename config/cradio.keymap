@@ -19,7 +19,7 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             bindings = <&mo>, <&kp>;
-            quick-tap-ms = <200>
+            quick-tap-ms = <200>;
         };        
 
         hml: home_row_mod_left {
