@@ -69,6 +69,12 @@
             bindings = <&caps_word>;
             require-prior-idle-ms = <100>;
         };
+        combo_delete{
+            timeout-ms<50>;
+            key-positions = <13 33>;
+            bindings = <&kp DEL>;
+            require-prior-idle-ms = <100>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
