@@ -58,19 +58,19 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
-            timeout-ms = <50>;
+            timeout-ms = <80>;
             key-positions = <1 8>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <100>;
         };
         combo_delete{
-            timeout-ms<50>;
+            timeout-ms = <80>;
             key-positions = <13 33>;
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
