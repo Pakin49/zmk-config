@@ -28,7 +28,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <80>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <80>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
@@ -51,26 +51,26 @@
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <180>;
-            require-prior-idle-ms = <150>; // ignore mod tap interrupt
+            require-prior-idle-ms = <120>; // ignore mod tap interrupt
             bindings = <&kp>, <&kp>; 
         };
     };
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <80>;
+            timeout-ms = <40>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
-            timeout-ms = <80>;
+            timeout-ms = <50>;
             key-positions = <1 8>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <100>;
         };
         combo_delete{
-            timeout-ms = <80>;
+            timeout-ms = <50>;
             key-positions = <13 33>;
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
@@ -153,10 +153,10 @@
                    &kp F1      &kp F2     &kp F3     &kp F4     &kp F5         &kp F6      &kp F7     &kp F8     &kp F9     &kp F10
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│BOOTLOADER│          │          │          │          │   │          │          │          │          │          │
-                     &kp F11   &kp F12    &kp C_PREV &kp C_NEXT &none        &kp PSCRN    &kp RSHFT   &kp RCTRL  &kp RALT  &kp RGUI
+                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT &kp C_VOL_UP        &kp PSCRN    &kp RSHFT   &kp RCTRL  &kp RALT  &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                   &kp C_PWR &kp C_SLEEP &kp C_VOL_DN &kp C_VOL_UP &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_TOG  &bt BT_CLR
+                   &kp F11   &kp F12    &kp C_PREV &kp C_NEXT &kp C_VOL_DN    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &out OUT_TOG  &bt BT_CLR
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &none      &kp C_PP        &none      &none 
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
