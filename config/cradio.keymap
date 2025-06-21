@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // Define layers
-#define NUM 1
-#define NAV 2
+#define NAV 1
+#define NUM  2
 #define SYM 3
 #define FUN 4
 
