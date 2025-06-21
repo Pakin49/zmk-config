@@ -90,7 +90,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                    &lt 1 TAB  &lt 2 ENTER    &lt 4 SPACE &lt 3 BSPC
+                                                    &lt NAV TAB  &lt NUM ENTER    &lt FUN SPACE &lt SYM BSPC
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
