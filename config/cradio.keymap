@@ -71,7 +71,7 @@
         };
         combo_delete{
             timeout-ms = <50>;
-            key-positions = <13 33>;
+            key-positions = <30 33>;
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
         };
