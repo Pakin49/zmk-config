@@ -63,6 +63,12 @@
             bindings = <&kp ESC>;
             require-prior-idle-ms = <100>;
         };
+        combo_capword {
+            timeout-ms = <50>;
+            key-positions = <1 8>;
+            bindings = <&caps_lock>;
+            require-prior-idle-ms = <100>;
+        };
         combo_caplock {
             timeout-ms = <50>;
             key-positions = <1 8>;
@@ -90,7 +96,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                               &lt NAV TAB  &lt NUM SPACE    &lt SYM ENTER &lt FUN BSPC
+                                               &lt NAV TAB  &lt NUM ENTER    &lt SYM SPACE &lt FUN BSPC
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
