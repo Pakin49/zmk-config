@@ -128,7 +128,7 @@
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp EQUAL          &kp MINUS  &kp N4     &kp N5     &kp N6     &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │    +     │    1     │    2    │    3      │   .      │
-                     &none     &none      &none      &none       &kp kNDER         &kp PLUS   &kp N1     &kp N2     &kp N3     &kp DOT
+                     &none     &none      &none      &none       &kp UNDER         &kp PLUS   &kp N1     &kp N2     &kp N3     &kp DOT
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &none      &none           &kp N0     &kp DOT
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
