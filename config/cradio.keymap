@@ -63,38 +63,44 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
             require-prior-idle-ms = <100>;
         };
         combo_capword{
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <2 3>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <100>;
         };
         combo_tab {
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <11 12>;
             bindings = <&kp TAB>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <21 22>;
             bindings = <&kp CAPS>;
             require-prior-idle-ms = <100>;
         };
         combo_delete{
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
         };
         combo_backspace{
-            timeout-ms = <70>;
+            timeout-ms = <40>;
             key-positions = <17 18>;
+            bindings = <&kp BSPC>;
+            require-prior-idle-ms = <100>;
+        };
+        combo_enter{
+            timeout-ms = <40>;
+            key-positions = <27 28>;
             bindings = <&kp BSPC>;
             require-prior-idle-ms = <100>;
         };
@@ -113,7 +119,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &mo NUM     &mo NAV       &kp SPACE  &mo SYM
+                                                     &mo NUM     &mo NAV       &kp SPACE &mo SYM
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
