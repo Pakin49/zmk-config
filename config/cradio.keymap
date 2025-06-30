@@ -101,7 +101,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt NUM BSPC  &lt SYM SPACE &kp ENTER
+                                                   &lt NAV TAB &lt SYM ENTER   &lt NUM SPACE &kp BSPC
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
