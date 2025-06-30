@@ -86,6 +86,11 @@
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
         };
+        combo_backspace{
+            timeout-ms = <40>;
+            key-positions = <17 18>;
+            bindings = <&kp BSPC>;
+            require-prior-idle-ms = <100>;
     };
     keymap {
         compatible = "zmk,keymap";
