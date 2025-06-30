@@ -77,7 +77,7 @@
         combo_tab {
             timeout-ms = <70>;
             key-positions = <11 12>;
-            bindings = <&kp CAPS>;
+            bindings = <&kp TAB>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
@@ -87,7 +87,7 @@
             require-prior-idle-ms = <100>;
         };
         combo_delete{
-            timeout-ms = <50>;
+            timeout-ms = <70>;
             key-positions = <7 8>;
             bindings = <&kp DEL>;
             require-prior-idle-ms = <100>;
@@ -95,7 +95,7 @@
         combo_backspace{
             timeout-ms = <70>;
             key-positions = <17 18>;
-            bindings = <&kp DEL>;
+            bindings = <&kp BSPC>;
             require-prior-idle-ms = <100>;
         };
     };
@@ -156,7 +156,7 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│     !    │    @     │    #     │    $     │    %     │   │    ^     │    &     │     *    │    \     │    |     │
-                    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp BLSH   &kp PIPE
+                    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp BSLH   &kp PIPE
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    `     │    [     │    (     │    {     │    -     │   │    =     │  SHIFT   │   CTRL   │   ALT    │   GUI    │
                     &kp GRAVE   &kp LBKT   &kp LPAR   &kp LBRC   &kp MINUS     &kp EQUAL &sk RSHIFT &sk RCTRL   &sk RALT   &sk RGUI
