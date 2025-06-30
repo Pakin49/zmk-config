@@ -101,7 +101,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt NUM ENTER &lt SYM SPACE &kp BSPC
+                                                   &lt NAV TAB &lt NUM BSPC  &lt SYM SPACE &kp ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -144,10 +144,10 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│     !    │    @     │    #     │    $     │    %     │   │    ^     │    &     │     *    │    |     │    \     │
-                    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE    &kp BLSH   
+                    &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp CARET  &kp AMPS   &kp ASTRK  &kp PIPE    &kp BSLH
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    ~     │    [     │    (     │    {     │    -     │   │    =     │    `     │    '     │    "     │    :     │
-                    &kp TILDE  &kp LBKT   &kp LPAR   &kp LBRC   &kp MINUS     &kp EQUAL  &kp GRAVE  &kp SQT   &kp DQT       &kp COLON 
+                    &kp TILDE  &kp LBKT   &kp LPAR   &kp LBRC   &kp MINUS     &kp EQUAL  &kp GRAVE  &kp SQT   &kp DQT       &kp COLON
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │    ]     │    )     │    }     │    _     │   │    +     │          │          │          │          │
                     &none     &kp RBRC   &kp RPAR   &kp RBKT    &kp UNDER      &kp PLUS  &none       &kp LT      &kp GT    &kp QMARK
