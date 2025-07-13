@@ -59,6 +59,9 @@
             quick-release;
             ignore-modifiers;
         };
+        &key_repeat {
+            usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
+        };
     };
     combos {
         compatible = "zmk,combos";
@@ -93,13 +96,13 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │   P      │
-                    &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U  &ht &key_repeat I      &kp O      &kp P 
+                    &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U     &kp I        &kp O      &kp P 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │
                     HRML( A,     S,        D,           F)      &kp G          &kp H      HRMR(J,      K,        L,         SEMI)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-                    &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+                    &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &ht &key_repeat DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                    &lt NAV TAB &lt SYM BSPC   &lt NUM SPACE &kp ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
