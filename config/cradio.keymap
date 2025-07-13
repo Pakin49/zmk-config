@@ -100,7 +100,7 @@
                     HRML( A,     S,        D,           F)      &kp G          &kp H      HRMR(J,      K,        L,         SEMI)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-                    &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &ht &key_repeat DOT    &kp FSLH
+                    &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                    &lt NAV TAB &lt SYM BSPC   &lt NUM SPACE &kp ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -153,7 +153,7 @@
                 //│          │          │          │          │    _     │   │    +     │    {     │    }     │    .     │    /     │
                     &none       &none      &none      &none    &kp UNDER      &kp PLUS   &kp LBRC    &kp RBRC   &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                       &none     &none          &none      &none
+                                                       &none     &none          &keyrepeat  &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
