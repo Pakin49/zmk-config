@@ -17,9 +17,9 @@
 #define HRML(k1,k2,k3,k4) &hml LGUI k1  &hml LALT k2  &hml LCTRL k3  &hml LSHFT k4
 #define HRMR(k1,k2,k3,k4) &hmr RSHFT k1  &hmr RCTRL k2  &hmr RALT k3  &hmr RGUI k4
 
-#define ht_tt 280
-#define ht_qt 175
-#define ht_rpi 150
+#define ht_tt 200
+#define ht_qt 125
+#define ht_rpi 100
 
 / {
     behaviors {
@@ -27,7 +27,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <180>;
             bindings = <&mo>, <&kp>;
             quick-tap-ms = <150>;
         };
@@ -110,7 +110,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt SYM BSPC   &lt NUM SPACE &kp ENTER
+                                                   &lt NAV TAB &lt SYM BSPC   &kp SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
