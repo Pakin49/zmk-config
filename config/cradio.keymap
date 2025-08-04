@@ -17,6 +17,10 @@
 #define HRML(k1,k2,k3,k4) &hml LGUI k1  &hml LALT k2  &hml LCTRL k3  &hml LSHFT k4
 #define HRMR(k1,k2,k3,k4) &hmr RSHFT k1  &hmr RCTRL k2  &hmr RALT k3  &hmr RGUI k4
 
+#define ht_tt 280
+#define ht_qt 175
+#define ht_rpi 150
+
 / {
     behaviors {
         lt: layer_tap {
@@ -32,9 +36,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            require-prior-idle-ms = <ht_rpi>;
+            tapping-term-ms = <ht_tt>;
+            quick-tap-ms = <ht_qt>;
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
@@ -42,9 +46,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            require-prior-idle-ms = <ht_rpi>;
+            tapping-term-ms = <ht_tt>;
+            quick-tap-ms = <ht_qt>;
             bindings = <&kp>, <&kp>;
             hold-trigger-on-release;
         };
@@ -52,10 +56,10 @@
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <ht_tt>;
+            quick-tap-ms = <ht_qt>;
+            require-prior-idle-ms = <ht_rpi>;
             bindings = <&kp>, <&kp>;
         };
         sk: sticky_key {
@@ -91,6 +95,7 @@
             require-prior-idle-ms = <100>;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -113,8 +118,8 @@
         navigation_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│ ALT+TAB  │   TAB    │   ESC    │   PTS    │          │   │  HOME    │  PG_DN   │ PG_UP    │  END     │          │
-                   &kp LA(TAB)  &kp TAB    &kp ESC   &kp PSCRN  &none        &kp PG_DN &msc SCRL_DOWN &msc SCRL_UP &kp PG_UP    &none
+                //│ ALT+TAB  │   TAB    │   ESC    │   PTS    │          │   │  HOME    │  PG_DN   │ PG_UP    │  S_UP    │   DEL    │
+                   &kp LA(TAB)  &kp TAB    &kp ESC   &kp PSCRN  &none        &msc SCRL_DOWN &kp PG_DN &kp PG_UP &msc SCRL_UP &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &none
