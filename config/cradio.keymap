@@ -15,6 +15,7 @@
 #define ht_tt 200
 #define ht_qt 125
 #define ht_rpi 100
+#define combo_time 30
 / {
     behaviors {
         lt: layer_tap {
@@ -39,7 +40,7 @@
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <ht_rpi>;
             tapping-term-ms = <ht_tt>;
             quick-tap-ms = <ht_qt>;
@@ -66,27 +67,33 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <60>;
+            timeout-ms = <combo_time>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
             require-prior-idle-ms = <100>;
         };
         combo_capword{
-            timeout-ms = <40>;
+            timeout-ms = <combo_time>;
             key-positions = <3 6>;
             bindings = <&caps_word>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
-            timeout-ms = <40>;
+            timeout-ms = <combo_time>;
             key-positions = <0 9>;
             bindings = <&kp CAPS>;
             require-prior-idle-ms = <100>;
         };
         combo_delete{
-            timeout-ms = <40>;
+            timeout-ms = <combo_time>;
             key-positions = <7 8>;
             bindings = <&kp DEL>;
+            require-prior-idle-ms = <100>;
+        };
+        combo_printscreen{
+            timeout-ms = <combo_time>;
+            key-positions = <5 6>;
+            bindings = <&kp PSCRN>;
             require-prior-idle-ms = <100>;
         };
     };
