@@ -79,7 +79,7 @@
         };
         combo_caplock {
             timeout-ms = <40>;
-            key-positions = <11 12>;
+            key-positions = <0 9>;
             bindings = <&kp CAPS>;
             require-prior-idle-ms = <100>;
         };
