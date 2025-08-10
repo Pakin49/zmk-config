@@ -70,7 +70,7 @@
             timeout-ms = <combo_time>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
-            layers = <0>
+            layers = <0>;
             require-prior-idle-ms = <100>;
         };
         combo_capword{

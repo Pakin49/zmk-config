@@ -74,24 +74,28 @@
             timeout-ms = <60>;
             key-positions = <2 7>;
             bindings = <&kp ESC>;
+            layouts = <0>;
             require-prior-idle-ms = <100>;
         };
         combo_capword{
             timeout-ms = <40>;
-            key-positions = <3 6>;
+            key-positions = <31 32>;
             bindings = <&caps_word>;
+            layouts = <0>;
             require-prior-idle-ms = <100>;
         };
         combo_caplock {
             timeout-ms = <40>;
             key-positions = <11 12>;
             bindings = <&kp CAPS>;
+            layouts = <0>;
             require-prior-idle-ms = <100>;
         };
         combo_delete{
             timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp DEL>;
+            layouts = <0>;
             require-prior-idle-ms = <100>;
         };
     };
