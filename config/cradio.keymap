@@ -72,7 +72,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <60>;
-            key-positions = <2 7>;
+            key-positions = <12 17>;
             bindings = <&kp ESC>;
             layers = <0>;
             require-prior-idle-ms = <100>;
