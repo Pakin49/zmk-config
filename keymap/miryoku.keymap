@@ -1,3 +1,7 @@
+// need to put this before include pointing
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -150,7 +154,6 @@
             layers = <6>;
             require-prior-idle-ms = <100>;
         };
-ader
     };
 
     keymap {
@@ -199,9 +202,9 @@ ader
                     &kp SQT     &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│     \    │    1     │    2     │    3     │    -     │   │          │          │          │          │          │
-                    &kp BSLH    &kp N1     &kp N2     &KP N3    &kp MINUS       &none      &none      &none      &none      &none
+                    &kp BSLH    &kp N1     &kp N2     &kp N3    &kp MINUS       &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &kp N0     &kp dot         &none       &none
+                                                     &kp N0     &kp DOT         &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -215,9 +218,9 @@ ader
                     &kp F11     &kp F4     &kp F5     &kp F6    &kp CAPS       &none    &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│   F10    │   F1     │   F2     │   F3     │          │   │          │          │          │          │          │
-                    &kp F10    &kp N1     &kp N2     &KP N3     &kp INS         &none      &none      &none      &none      &none
+                    &kp F10    &kp N1     &kp N2     &kp N3     &kp INS         &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &kp N0     &kp dot         &none       &none
+                                                     &kp N0     &kp DOT         &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

@@ -1,6 +1,6 @@
 // need to put this before include pointing
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 800
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -15,9 +15,6 @@
 #define NAV 4
 #define MOUSE 5
 #define MEDIA 6
-
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 800
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &hml LGUI k1  &hml LALT k2  &hml LCTRL k3  &hml LSHFT k4
