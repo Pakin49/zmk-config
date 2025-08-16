@@ -224,7 +224,7 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &none       &none      &none      &none     &none 
+                    &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
@@ -240,7 +240,7 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &kp K_REDO &kp K_PAST &kp K_COPY &kp K_CUT  &kp K_UNDO
+                    &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT  &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │   down   │    up    │  right   │          │
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &vim_wq
