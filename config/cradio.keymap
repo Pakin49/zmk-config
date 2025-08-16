@@ -150,7 +150,6 @@
             layers = <6>;
             require-prior-idle-ms = <100>;
         };
-ader
     };
 
     keymap {
