@@ -71,6 +71,8 @@
     macros {
         vim_wq: vim_wq {
             compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings = 
                   <&kp COLON>
@@ -81,6 +83,8 @@
         };
         vim_w: vim_w{
             compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings = 
                   <&kp COLON>
@@ -90,6 +94,8 @@
         };
         vim_q: vim_q{
             compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
             #binding-cells = <0>;
             bindings = 
                   <&kp COLON>
