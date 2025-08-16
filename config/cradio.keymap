@@ -69,7 +69,7 @@
         };
     };
     macros {
-        vim_wq : vim_wq {
+        vim_wq: vim_wq {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = 
