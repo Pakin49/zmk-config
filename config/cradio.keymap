@@ -106,6 +106,18 @@
                 , <&kp ENTER>
                 ;
         };
+        vim_q_notsave: vim_q_notsave{
+            compatible = "zmk,behavior-macro";
+            wait-ms = <40>;
+            tap-ms = <40>;
+            #binding-cells = <0>;
+            bindings = 
+                  <&kp COLON>
+                , <&kp Q>
+                , <&kp EXCL>
+                , <&kp ENTER>
+                ;
+        };
     };
     combos {
         compatible = "zmk,combos";
@@ -120,6 +132,13 @@
             timeout-ms = <60>;
             key-positions = <31 32>;
             bindings = <&caps_word>;
+            layers = <0>;
+            require-prior-idle-ms = <100>;
+        };
+        combo_delete{
+            timeout-ms = <40>;
+            key-positions = <17 18>;
+            bindings = <&kp DEL>;
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
@@ -228,10 +247,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp DEL
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &vim_w
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END    &none
+                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END    &vim_wq
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -244,10 +263,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT  &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │   down   │    up    │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &vim_wq
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &vim_q
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │ m left   │ m down   │  m up    │ m  right │          │
-                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &vim_w
+                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &vim_q_notsave
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
