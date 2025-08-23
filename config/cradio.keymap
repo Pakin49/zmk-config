@@ -123,14 +123,14 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <60>;
-            key-positions = <12 17>;
+            key-positions = <31 32>;
             bindings = <&kp ESC>;
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
         combo_capword{
             timeout-ms = <60>;
-            key-positions = <31 32>;
+            key-positions = <12 17>;
             bindings = <&caps_word>;
             layers = <0>;
             require-prior-idle-ms = <100>;
