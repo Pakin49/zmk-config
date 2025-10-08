@@ -135,13 +135,6 @@
             layers = <0>;
             require-prior-idle-ms = <100>;
         };
-        combo_delete{
-            timeout-ms = <40>;
-            key-positions = <16 17>;
-            bindings = <&kp DEL>;
-            layers = <0>;
-            require-prior-idle-ms = <100>;
-        };
         combo_grave{
             timeout-ms = <40>;
             key-positions = <12 13>;
@@ -186,7 +179,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt MOUSE BSPC   &lt SYM SPACE &lt NUM ENTER
+                                                   &lt NAV TAB &mo MOUSE       &lt SYM SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -231,7 +224,7 @@
                     &kp F12     &kp F7     &kp F8     &kp F9    &kp PSCRN      &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│   F11    │   F4     │   F5     │   F6     │          │   │          │          │          │          │          │
-                    &kp F11     &kp F4     &kp F5     &kp F6    &kp CAPS       &none    &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                    &kp F11     &kp F4     &kp F5     &kp F6    &kp CAPS       &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│   F10    │   F1     │   F2     │   F3     │          │   │          │          │          │          │          │
                     &kp F10    &kp F1     &kp F2     &kp F3     &kp INS         &none      &none      &none      &none      &none
@@ -247,10 +240,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &vim_w
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END    &vim_wq
+                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END   &kp DEL
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -263,10 +256,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT  &kp K_UNDO
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │   down   │    up    │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &vim_q
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │ m left   │ m down   │  m up    │ m  right │          │
-                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &vim_q_notsave
+                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp SPACE
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
