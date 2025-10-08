@@ -179,7 +179,7 @@
                 //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
                     &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &mo MOUSE       &lt SYM SPACE &lt NUM ENTER
+                                                   &lt NAV TAB &lt MOUSE BSPC      &lt SYM SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -259,7 +259,7 @@
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │ m left   │ m down   │  m up    │ m  right │          │
-                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp SPACE
+                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp DEL
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
