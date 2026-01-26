@@ -17,10 +17,6 @@
 #define HRML(k1,k2,k3,k4) &hml LGUI k1  &hml LALT k2  &hml LCTRL k3  &hml LSHFT k4
 #define HRMR(k1,k2,k3,k4) &hmr RSHFT k1  &hmr RCTRL k2  &hmr RALT k3  &hmr RGUI k4
 
-#define ht_tt 200
-#define ht_qt 125
-#define ht_rpi 100
-
 //#define ht_tt 200
 //#define ht_qt 125
 //#define ht_rpi 100
