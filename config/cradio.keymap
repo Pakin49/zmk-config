@@ -155,7 +155,7 @@
         combo_bluetooth_clear{
             timeout-ms = <40>;
             key-positions = <2 7>;
-            bindings = <&bt BT_CLR>;
+            bindings = <&bt BT_CLR_ALL>;
             layers = <6>;
             require-prior-idle-ms = <100>;
         };
@@ -279,7 +279,7 @@
                      &none      &none     &none       &none      &none       &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_MUTE
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none      &none         &none    &kp LS(C_VOL_DN) &kp LS(C_VOL_UP)  &none  &bt BT_CLR 
+                    &none       &none      &none      &none      &none      &kp C_BRI_DN  &kp LS(C_VOL_DN) &kp LS(C_VOL_UP) &kp C_BRI_UP &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &none      &none          &kp C_PP    &kp C_STOP
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
