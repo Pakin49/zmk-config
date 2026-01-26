@@ -65,6 +65,13 @@
     };
     combos {
         compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <60>;
+            key-positions = <31 32>;
+            bindings = <&kp ESC>;
+            layers = <0>;
+            require-prior-idle-ms = <100>;
+        };
         combo_capword{
             timeout-ms = <60>;
             key-positions = <12 17>;
@@ -91,6 +98,13 @@
     keymap {
 
         compatible = "zmk,keymap";
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                tri_layer {
+                    if-layers = <2 3>;
+                    then-layer = <4>;
+                };
+            };
         default_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -101,9 +115,9 @@
                     HRML( A,     S,        D,           F)      &kp G          &kp H      HRMR(J,       K,         L,       SEMI)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│     Z    │     X    │    C     │    V     │    B     │   │    N     │    M     │    ,     │    .     │    /     │
-                    &lt FUN Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+                    &kp Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt NUM SPACE   &kp SPACE &lt SYM ENTER
+                                                   &lt NUM TAB &lt NAV BSPC   &kp SPACE &lt SYM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -159,7 +173,7 @@
             >;
         };
 
-        function_layer {
+        tri_layer {
           bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
