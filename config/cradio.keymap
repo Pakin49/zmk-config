@@ -125,8 +125,8 @@
         navigation_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│   ESC    │    `     │    ~     │   UNDO   │   REDO   │   |caps_word |  PASTE   │   COPY   │   CUT    │   DEL    │  
-                   &kp ESC    &kp GRAV  &kp TILDE &kp C_AC_UNDO &kp C_AC_REDO &caps_word  &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &kp DEL
+                //│   ESC    │    `     │    ~     │   UNDO   │   REDO   │   |   ESC    |  PASTE   │   COPY   │   CUT    │   DEL    │  
+                   &kp ESC    &kp GRAV  &kp TILDE &kp C_AC_UNDO &kp C_AC_REDO &kp ESC    &kp C_AC_PASTE &kp C_AC_COPY &kp C_AC_CUT &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │    -     │   │   left   │  down    │   up     │  right   │    <-    │
                     &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &kp MINUS      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
@@ -142,8 +142,8 @@
         number_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│   esc    │    `     │    ~     │   UNDO   │   REDO   │   │caps_word │    7     │    8     │    9     │   DEL    │
-                    &kp ESC   &kp GRAVE  &kp TILDE &kp C_AC_UNDO &kp C_AC_REDO &caps_word &kp N7     &kp N8     &kp N9     &kp  DEL
+                //│   esc    │    `     │    ~     │   UNDO   │   REDO   │   │   ESC    │    7     │    8     │    9     │   DEL    │
+                    &kp ESC   &kp GRAVE  &kp TILDE &kp C_AC_UNDO &kp C_AC_REDO &kp ESC    &kp N7     &kp N8     &kp N9     &kp  DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │    -     │   │    =     │    4     │    5     │    6     │   <-     │
                      &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT &kp MINUS    &kp EQUAL   &kp N4     &kp N5      &kp N6     &kp BSPC
