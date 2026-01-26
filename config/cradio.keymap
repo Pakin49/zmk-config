@@ -26,7 +26,7 @@
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <180>;
             bindings = <&mo>, <&kp>;
             quick-tap-ms = <150>;
@@ -98,13 +98,6 @@
     keymap {
 
         compatible = "zmk,keymap";
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                tri_layer {
-                    if-layers = <2 3>;
-                    then-layer = <4>;
-                };
-            };
         default_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
@@ -112,7 +105,7 @@
                     &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U     &kp I        &kp O      &kp P 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    A     │    S     │    D     │    F     │    G     │   │    H     │    J     │    K     │    L     │    ;   │
-                    HRML( A,     S,        D,           F)      &kp G          &kp H      HRMR(J,       K,         L,       SEMI)
+                    HRML( A,     S,        D,           F)      &lt FUN G          &kp H      HRMR(J,       K,         L,       SEMI)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│     Z    │     X    │    C     │    V     │    B     │   │    N     │    M     │    ,     │    .     │    /     │
                     &kp Z   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
@@ -172,18 +165,17 @@
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
-
-        tri_layer {
-          bindings = <
+       function_layer{
+            bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
-         &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &out OUT_TOG &kp C_BRI_DN  &kp LS(C_VOL_DN) &kp LS(C_VOL_UP) &kp C_BRI_UP &none
+                    &none       &none      &none      &none     &none   &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
                      &none      &none     &none       &none      &none       &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_MUTE
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none      &none         &none       &none      &none      &none      &none      
+                    &none       &none      &none      &none      &none      &kp C_BRI_DN  &kp LS(C_VOL_DN) &kp LS(C_VOL_UP) &kp C_BRI_UP &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &none      &none          &kp C_PP    &kp C_STOP
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
