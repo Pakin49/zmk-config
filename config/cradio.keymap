@@ -115,7 +115,7 @@
                 //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │ / ?      │
                     &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                   &lt NAV TAB &lt MOUSE SPACE  &lt SYM BSPC &lt NUM ENTER
+                                                   &lt NAV TAB &lt MOUSE BSPC  &lt SYM SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -126,8 +126,8 @@
                 //│    [     │    7     │    8     │    9     │    ]     │   │          │          │          │          │          │
                     &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    "     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
-                    &kp DQT    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    '     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
+                    &kp SQT    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│     `    │    1     │    2     │    3     │    \     │   │          │          │          │          │          │
                     &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH        &none      &none      &none      &none      &none
@@ -143,8 +143,8 @@
                 //│     {    │    @     │    #     │    )     │    }     │   │          │          │          │          │          │
                     &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    '     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
-                    &kp SQT  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    "     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
+                    &kp DQT  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    ~     │    !     │    @     │    #     │    |     │   │          │          │          │          │          │
                    &kp TILDE   &kp EXCL    &kp AT    &kp HASH   &kp PIPE       &none      &none      &none      &none      &none
