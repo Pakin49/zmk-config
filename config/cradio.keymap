@@ -33,9 +33,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <ht_tt>;
             bindings = <&mo>, <&kp>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <ht_qt>;
         };
 
         hml: home_row_mod_left {
@@ -68,59 +68,6 @@
             require-prior-idle-ms = <ht_rpi>;
             bindings = <&kp>, <&kp>;
         };
-        sk: sticky_key {
-            release-after-ms = <2000>;
-            quick-release;
-            ignore-modifiers;
-        };
-    };
-    macros {
-        vim_wq: vim_wq {
-            compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
-            #binding-cells = <0>;
-            bindings = 
-                  <&kp COLON>
-                , <&kp W>
-                , <&kp Q>
-                , <&kp ENTER>
-                ;
-        };
-        vim_w: vim_w{
-            compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
-            #binding-cells = <0>;
-            bindings = 
-                  <&kp COLON>
-                , <&kp W>
-                , <&kp ENTER>
-                ;
-        };
-        vim_q: vim_q{
-            compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
-            #binding-cells = <0>;
-            bindings = 
-                  <&kp COLON>
-                , <&kp Q>
-                , <&kp ENTER>
-                ;
-        };
-        vim_q_notsave: vim_q_notsave{
-            compatible = "zmk,behavior-macro";
-            wait-ms = <40>;
-            tap-ms = <40>;
-            #binding-cells = <0>;
-            bindings = 
-                  <&kp COLON>
-                , <&kp Q>
-                , <&kp EXCL>
-                , <&kp ENTER>
-                ;
-        };
     };
     combos {
         compatible = "zmk,combos";
@@ -141,7 +88,7 @@
         combo_bluetooth_clear{
             timeout-ms = <40>;
             key-positions = <2 7>;
-            bindings = <&bt BT_CLR_ALL>;
+            bindings = <&bt BT_CLR>;
             layers = <6>;
             require-prior-idle-ms = <100>;
         };
@@ -159,14 +106,14 @@
         default_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │   P      │
-                    &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U     &kp I        &kp O      &kp P 
+                //│    Q     │    W     │    F     │    P     │    B     │   │    J     │    L     │    U     │    Y     │    '     │
+                    &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L     &kp U        &kp Y      &kp SQT 
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │  ; :     │
-                    HRML( A,     S,        D,           F)      &lt MEDIA G   &lt FUN H  HRMR(J,      K,        L,         SEMI)
+                //│    A     │    R     │    S     │    T     │    G     │   │    M     │    N     │    E     │    I     │    O     │
+                    HRML( A,     R,        S,           T)      &lt MEDIA G   &lt FUN M  HRMR(N,      E,        I,         O)
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-                    &kp Z       &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+                //│    Z     │    X     │    C     │    D     │    V     │   │    K     │    H     │ , <      │ . >      │ / ?      │
+                    &kp Z       &kp X      &kp C      &kp D      &kp V         &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                    &lt NAV TAB &lt MOUSE BSPC      &lt SYM SPACE &lt NUM ENTER
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -179,8 +126,8 @@
                 //│    [     │    7     │    8     │    9     │    ]     │   │          │          │          │          │          │
                     &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    '     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
-                    &kp SQT     &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    ;     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
+                    &kp SEMI    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│     `    │    1     │    2     │    3     │    \     │   │          │          │          │          │          │
                     &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH       &none      &none      &none      &none      &none
@@ -196,8 +143,8 @@
                 //│     {    │    @     │    #     │    )     │    }     │   │          │          │          │          │          │
                     &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    "     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
-                    &kp DQT    &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    :     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
+                    &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    ~     │    !     │    @     │    #     │    |     │   │          │          │          │          │          │
                    &kp TILDE   &kp EXCL    &kp AT    &kp HASH   &kp PIPE       &none      &none      &none      &none      &none
@@ -229,10 +176,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │  down    │   up     │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT  &none          &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END   &kp BSPC
+                    &none       &none      &none      &none     &none          &kp END    &kp PG_DN  &kp PG_UP   &kp END   &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -245,10 +192,10 @@
                     &none       &none      &none      &none     &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT  &kp DEL
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │   left   │   down   │    up    │  right   │          │
-                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &kp SEMI
+                    &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT   &none   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT  &kp BSPC
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │ m left   │ m down   │  m up    │ m  right │          │
-                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp BSPC
+                     &none      &none      &none      &none       &none  &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &kp ENTER
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                       &none       &none        &mkp LCLK  &mkp RCLK
             //                                     ╰──────────┴──────────╯   ╰──────────┴──────────╯
