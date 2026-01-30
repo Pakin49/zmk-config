@@ -20,9 +20,9 @@
 #define HRML(k1,k2,k3,k4) &hml LGUI k1  &hml LALT k2  &hml LCTRL k3  &hml LSHFT k4
 #define HRMR(k1,k2,k3,k4) &hmr RSHFT k1  &hmr RCTRL k2  &hmr RALT k3  &hmr RGUI k4
 
-#define ht_tt 200
+#define ht_tt 190
 #define ht_qt 125
-#define ht_rpi 100
+#define ht_rpi 90
 
 //#define ht_tt 280
 //#define ht_qt 175
@@ -41,7 +41,7 @@
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <ht_rpi>;
             tapping-term-ms = <ht_tt>;
             quick-tap-ms = <ht_qt>;
@@ -51,7 +51,7 @@
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <ht_rpi>;
             tapping-term-ms = <ht_tt>;
             quick-tap-ms = <ht_qt>;
@@ -133,23 +133,9 @@
         };
         combo_capword{
             timeout-ms = <60>;
-            key-positions = <12 17>;
+            key-positions = <30 33>;
             bindings = <&caps_word>;
             layers = <0>;
-            require-prior-idle-ms = <100>;
-        };
-        combo_grave{
-            timeout-ms = <40>;
-            key-positions = <12 13>;
-            bindings = <&kp GRAVE>;
-            layers = <1>;
-            require-prior-idle-ms = <100>;
-        };
-        combo_tilde{
-            timeout-ms = <40>;
-            key-positions = <12 13>;
-            bindings = <&kp TILDE>;
-            layers = <2>;
             require-prior-idle-ms = <100>;
         };
         combo_bluetooth_clear{
@@ -194,10 +180,10 @@
                     &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    '     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
-                    &kp SQT     &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                    &kp SQT     &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│     \    │    1     │    2     │    3     │    -     │   │          │          │          │          │          │
-                    &kp BSLH    &kp N1     &kp N2     &kp N3    &kp MINUS       &none      &none      &none      &none      &none
+                //│     `    │    1     │    2     │    3     │    \     │   │          │          │          │          │          │
+                    &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH       &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &kp N0     &kp DOT         &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -207,16 +193,16 @@
         symbol_layer {
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-                //│     {    │    @     │    #     │    $     │    }     │   │          │          │          │          │          │
+                //│     {    │    @     │    #     │    )     │    }     │   │          │          │          │          │          │
                     &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│    "     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
-                    &kp DQT    &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp RSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                    &kp DQT    &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    |     │    !     │    @     │    #     │    _     │   │          │          │          │          │          │
-                    &kp PIPE   &kp EXCL    &kp AT    &kp HASH   &kp UNDER       &none      &none      &none      &none      &none
+                //│    ~     │    !     │    @     │    #     │    |     │   │          │          │          │          │          │
+                   &kp TILDE   &kp EXCL    &kp AT    &kp HASH   &kp PIPE       &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                                     &kp LPAR   &kp RPAR        &none       &none
+                                                     &kp RPAR   &kp UNDER       &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -273,7 +259,7 @@
             bindings = <
                 //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
                 //│          │          │          │          │          │   │          │          │          │          │          │
-                    &none       &none      &none      &none     &none   &out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 
+                    &none       &none      &none      &none     &none    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &out OUT_TOG
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
                 //│          │          │          │          │          │   │          │          │          │          │          │
                      &none      &none     &none       &none      &none       &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &kp C_MUTE
