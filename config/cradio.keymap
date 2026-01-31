@@ -126,11 +126,11 @@
                 //│    [     │    7     │    8     │    9     │    ]     │   │          │          │          │          │          │
                     &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    '     │    4     │    5     │    6     │    =     │   │          │          │          │          │          │
-                    &kp SQT    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    '     │    1     │    2     │    3     │    =     │   │          │          │          │          │          │
+                    &kp SQT    &kp N1     &kp N2     &kp N3    &kp EQUAL       &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│     `    │    1     │    2     │    3     │    \     │   │          │          │          │          │          │
-                    &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH        &none      &none      &none      &none      &none
+                //│     `    │    4     │    5     │    6     │    \     │   │          │          │          │          │          │
+                    &kp GRAVE   &kp N4     &kp N5     &kp N6    &kp BSLH        &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &kp N0     &kp MINUS       &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -143,11 +143,11 @@
                 //│     {    │    @     │    #     │    )     │    }     │   │          │          │          │          │          │
                     &kp LBRC   &kp AMPS   &kp ASTRK  &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    "     │    @     │    %     │    ^     │    +     │   │          │          │          │          │          │
-                    &kp DQT  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
+                //│    "     │    !     │    @     │    #     │    +     │   │          │          │          │          │          │
+                    &kp DQT    &kp EXCL    &kp AT   &kp HASH    &kp PLUS        &none    &kp LSHIFT  &kp RCTRL  &kp RALT   &kp RGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│    ~     │    !     │    @     │    #     │    |     │   │          │          │          │          │          │
-                   &kp TILDE   &kp EXCL    &kp AT    &kp HASH   &kp PIPE       &none      &none      &none      &none      &none
+                //│    ~     │    $     │    %     │    ^     │    |     │   │          │          │          │          │          │
+                   &kp TILDE   &kp DLLR   &kp PRCNT  &kp CARET  &kp PIPE       &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &kp RPAR   &kp UNDER       &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -159,11 +159,11 @@
                 //│   F12    │   F7     │   F8     │   F9     │          │   │          │          │          │          │          │
                     &kp F12     &kp F7     &kp F8     &kp F9    &kp PSCRN      &none      &none      &none      &none      &none
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│   F11    │   F4     │   F5     │   F6     │          │   │          │          │          │          │          │
-                    &kp F11     &kp F4     &kp F5     &kp F6    &kp CAPS       &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
+                //│   F11    │   F1     │   F2     │   F3     │          │   │          │          │          │          │          │
+                    &kp F11     &kp F1     &kp F2     &kp F3  &kp CAPS       &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
                 //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-                //│   F10    │   F1     │   F2     │   F3     │          │   │          │          │          │          │          │
-                    &kp F10    &kp F1     &kp F2     &kp F3     &kp INS         &none      &none      &none      &none      &none
+                //│   F10    │   F4     │   F5     │   F6     │          │   │          │          │          │          │          │
+                    &kp F10     &kp F4     &kp F5     &kp F6     &kp INS         &none      &none      &none      &none      &none
                 //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                      &none      &none           &none       &none
                 //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
